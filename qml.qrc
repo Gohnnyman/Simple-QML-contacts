@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>src/main.qml</file>
+        <file>src/OwnButton.qml</file>
+        <file>src/img/blueBut.png</file>
+        <file>src/img/blueButPressed.png</file>
+        <file>src/NewContactTab.qml</file>
+        <file>src/ContactsTab.qml</file>
+        <file>src/Keyboard.qml</file>
+    </qresource>
+</RCC>
