@@ -9,6 +9,8 @@ Item {
     readonly property int _width: 50
     readonly property int _height: 45
     readonly property int _space: 1
+    readonly property color clr: Qt.rgba(.8, .8, .8, .9)
+    readonly property color pressedclr: Qt.rgba(.6, .6, .6, .9)
     property string currentChar: ""
     property string tmp
     property int currentIndex: -1
@@ -32,7 +34,7 @@ Item {
                     Rectangle {
                         width: _width
                         height: _height
-                        color: Qt.rgba(.8, .8, .8, .9)
+                        color: clr
                         Text {
                             id: txt
                             anchors.centerIn: parent
@@ -61,6 +63,14 @@ Item {
                                 currentChar = ""
                                 currentIndex = -1;
                             }
+
+                            onPressed: {
+                                parent.color = pressedclr
+                            }
+
+                            onReleased: {
+                                parent.color = clr
+                            }
                         } // MouseArea
                     } // Rectangle
                 } // Repeater2
@@ -79,7 +89,7 @@ Item {
             Rectangle {
                 width: _width
                 height: _height
-                color: Qt.rgba(.8, .8, .8, .9)
+                color: clr
                 Text {
                     anchors.centerIn: parent
                     text: newContactTab.activeTextField ? "_" : 0
@@ -104,6 +114,14 @@ Item {
                         }
                     }
 
+                    onPressed: {
+                        parent.color = pressedclr
+                    }
+
+                    onReleased: {
+                        parent.color = clr
+                    }
+
 
                 }
             } // Rectangle
@@ -111,7 +129,7 @@ Item {
             Rectangle {
                 width: _width
                 height: _height
-                color: Qt.rgba(.8, .8, .8, .9)
+                color: clr
                 Text {
                     anchors.centerIn: parent
                     text: "←"
@@ -131,8 +149,14 @@ Item {
                         }
                     }
 
-                }
+                    onPressed: {
+                        parent.color = pressedclr
+                    }
 
+                    onReleased: {
+                        parent.color = clr
+                    }
+                }
             } // Rectangle
         }
     } // Column
