@@ -32,7 +32,7 @@ Item {
                     Rectangle {
                         width: _width
                         height: _height
-                        color: Qt.rgba(Math.random(), Math.random(), Math.random(), Math.random())
+                        color: Qt.rgba(.8, .8, .8, .9)
                         Text {
                             id: txt
                             anchors.centerIn: parent
@@ -79,7 +79,7 @@ Item {
             Rectangle {
                 width: _width
                 height: _height
-                color: Qt.rgba(Math.random(), Math.random(), Math.random(), Math.random())
+                color: Qt.rgba(.8, .8, .8, .9)
                 Text {
                     anchors.centerIn: parent
                     text: newContactTab.activeTextField ? "_" : 0
@@ -111,7 +111,7 @@ Item {
             Rectangle {
                 width: _width
                 height: _height
-                color: Qt.rgba(Math.random(), Math.random(), Math.random(), Math.random())
+                color: Qt.rgba(.8, .8, .8, .9)
                 Text {
                     anchors.centerIn: parent
                     text: "←"
@@ -130,6 +130,7 @@ Item {
                                     newContactTab.phonenumberTextField.substring(0, newContactTab.phonenumberTextField.length - 1)
                         }
                     }
+
                 }
 
             } // Rectangle
